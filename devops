@@ -1,0 +1,18 @@
+public class LogicExample {
+    public static void main(String[] args) {
+        // Variable declarations
+        int number = 15;
+        double price = 19.99;
+        String message = "The score is: ";
+        boolean isComplete = false;
+
+        // Conditional control flow
+        if (number > 10) {
+            isComplete = true;
+            System.out.println(message + number);
+        } else {
+            System.out.println("Condition not met.");
+        }
+    }
+}
+
