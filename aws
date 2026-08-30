@@ -1,0 +1,11 @@
+public class LoopExample {
+    public static void main(String[] args) {
+        // Initializing a fixed-size integer array
+        int[] primeNumbers = {2, 3, 5, 7, 11};
+
+        // Enhanced for loop (for-each) to read data
+        for (int prime : primeNumbers) {
+            System.out.println("Prime: " + prime);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+// Blueprint class
+class Car {
+    // Attributes (Fields)
+    private String brand;
+
+    // Constructor to initialize attributes
+    public Car(String brand) {
+        this.brand = brand;
+    }
+
+    // Behavior (Method)
+    public void drive() {
+        System.out.println("The " + brand + " is driving.");
+    }
+}
+
+// Execution class
+public class Main {
+    public static void main(String[] args) {
+        // Instantiating a new object
+        Car myCar = new Car("Toyota");
+        myCar.drive(); 
+    }
+}
