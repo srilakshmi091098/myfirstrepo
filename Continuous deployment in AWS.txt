@@ -1,0 +1,29 @@
+          Continuous deployment in AWS
+
+1. build the code deploy solution. firstly go to Developer tools -> Code deploy -> Applications -> create application . Give the application name  and compute platform. then  click on create.
+2. Here application means code deploy is 
+3. create a folder in GIT hub and add  Docker file, app.py, appspec.yml, buildspec.yml, requirement.txt, start_container.sh and stop_container.sh files in folder.
+4.for the 3rd step we need to create aws instance using name whatever we want and os type is selected as ubuntu, t2 micro is the image type, and key value pair wherever we have that need to select and edit newtwork settings in that default vpc or whatever we want that we can select and auto assign public ip is as enabled.
+5. after that SSH is enabled then click on EC2 instance create. 
+6. after the creation of instance in the right side we have three dots there is a option like manage tags there we will give name and value the create a tag then it will create a tag to the instance. Tags are used to tracking the resources and projects in a easy way. that's why tags are more useful in the AWS.
+7. AWS code deploy need to have EC2 instane.one single instance or multiple EC2 instances(key value pair is same for all instances).
+8.we need to connect instance using  public ip address and install code deployment agent for ubuntu server
+9 Run all the commands given in the manual as usual.
+10.start the service using the given commands.
+11. after successfully starting then create a role and given permission to the code deploy in that role.
+12. need to restart the agent service.
+13. create a deployment group we need to give service role what we have created before.in the tag we can give Ec2 instance in the permissions section. all mandatory fields we nee dto give and we need to create deployment group.
+14.run the code deployment using instance. after it will connect to git hub.
+15. then take one docker image to install and push it. for that need to create appspec.yml file, stop_container.sh and start_container.sh files
+16. change the code deploy to python script and given all mandatory fields to create the code deployment.
+17.install docker in the machine and run the code deploy script then it will run. In start container script we have docker pull and docker run commands.
+18. in the code deploy pipe line we have already 2 stages one is source and second one is build again need to add deploy stage in that need to give name and deployment group also we need to give and source artifact and application name also we need to give then click on done.
+19.click on save to save the changes.
+20 build the code again using start_container.sh file to commit.
+21. stop_container.sh is used to remove the running container forcefully. then we can start the container using start_container.sh script.
+22. we need to run release change in the code deployment then it will run the 3 stages.
+
+
+	  
+
+
